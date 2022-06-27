@@ -15,6 +15,9 @@ print('The image as array is:', img)
 print('The Shape of the image is:',img.shape)
 print("The size of the array/matrix is:", img.size)
 
-#Converts AxesImage into Image and saves/shows the new image
+#Calculates Averages from AxesImage Matrix and Stores into a new AxesImage Matrix
+
+
+#Converts AxesImage into Image and saves the new image
 converted = plt.imshow(img, interpolation='nearest')
 plt.savefig('converted.png', bbox_inches='tight', pad_inches=0)
