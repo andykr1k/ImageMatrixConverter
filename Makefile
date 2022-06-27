@@ -1,0 +1,2 @@
+clean:
+	rm converted.png
