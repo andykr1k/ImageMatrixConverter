@@ -17,5 +17,4 @@ print("The size of the array/matrix is:", img.size)
 
 #Converts AxesImage into Image and saves/shows the new image
 converted = plt.imshow(img, interpolation='nearest')
-plt.savefig('converted.png')
-plt.show()
+plt.savefig('converted.png', bbox_inches='tight', pad_inches=0)
