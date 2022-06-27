@@ -8,3 +8,34 @@
 <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/andykr1k/ImageMatrixConverter?&style=for-the-badge"/>
 <img alt="GitHub Commit Activity (Week)" src="https://img.shields.io/github/commit-activity/w/andykr1k/ImageMatrixConverter?&style=for-the-badge"/>
 </div>
+
+# To begin program:
+## Create Enviroment
+```
+python3 -m venv env
+```
+
+## Start Enviroment
+```
+source env/bin/activate
+```
+
+## Install Packages 
+```
+pip install matplotlib
+```
+
+## Install Source Code
+```
+git clone https://github.com/andykr1k/ImageMatrixConverter.git
+```
+
+## Run Program
+```
+python3 convert.py (Will prompt for image name *must have image in project directory* *must include full name w/ extension*)
+```
+
+## Don't Forget to Deactivate your Enviroment!
+```
+deactivate
+```
