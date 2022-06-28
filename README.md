@@ -10,6 +10,18 @@
 </div>
 
 # To begin program:
+
+
+## Create Directory
+```
+mkdir [nameo od directory]
+```
+
+## Install Source Code
+```
+git clone https://github.com/andykr1k/ImageMatrixConverter.git
+```
+
 ## Create Enviroment
 ```
 python3 -m venv env
@@ -23,11 +35,6 @@ source env/bin/activate
 ## Install Packages 
 ```
 pip install matplotlib
-```
-
-## Install Source Code
-```
-git clone https://github.com/andykr1k/ImageMatrixConverter.git
 ```
 
 ## Run Program
