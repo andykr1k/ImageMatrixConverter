@@ -51,7 +51,7 @@ else:
     #Average of full layer pixels will go here
     something = 0
 
-#Average of full layer pixels
+#####################Average of full layer pixels (3x3)##########################
 redCounter = 0
 blueCounter = 0
 greenCounter = 0
@@ -108,10 +108,95 @@ greenCounter = img[r+1][c+1][2]*diag + greenCounter
 redAvg = redCounter
 blueAvg = blueCounter
 greenAvg = greenCounter
+#####################Average of full layer pixels (3x3)##########################
 
+
+#####################Average of half layer pixels (2x3)(Top Coloumn)##########################
+redCounter = 0
+blueCounter = 0
+greenCounter = 0
+middle = 0.33334
+side = 0.16667
+diag = 0.08334
+r = 0
+c = 1
+#Left
+redCounter = img[r-1][c][0]*side + redCounter
+blueCounter = img[r-1][c][1]*side + blueCounter
+greenCounter = img[r-1][c][2]*side + greenCounter
+
+#Middle
+redCounter = img[r][c][0]*middle + redCounter
+blueCounter = img[r][c][1]*middle + blueCounter
+greenCounter = img[r][c][2]*middle + greenCounter
+
+#Right
+redCounter = img[r+1][c][0]*side + redCounter
+blueCounter = img[r+1][c][1]*side + blueCounter
+greenCounter = img[r+1][c][2]*side + greenCounter
+
+#Bottom left
+redCounter = img[r-1][c+1][0]*diag + redCounter
+blueCounter = img[r-1][c+1][1]*diag + blueCounter
+greenCounter = img[r-1][c+1][2]*diag + greenCounter
+
+#Bottom middle
+redCounter = img[r][c+1][0]*side + redCounter
+blueCounter = img[r][c+1][1]*side + blueCounter
+greenCounter = img[r][c+1][2]*side + greenCounter
+
+#Bottom right
+redCounter = img[r+1][c+1][0]*diag + redCounter
+blueCounter = img[r+1][c+1][1]*diag + blueCounter
+greenCounter = img[r+1][c+1][2]*diag + greenCounter
+
+redAvg = redCounter
+blueAvg = blueCounter
+greenAvg = greenCounter
 print("The average of the red pixels is:", redAvg)
 print("The average of the blue pixels is:", blueAvg)
 print("The average of the green pixels is:", greenAvg)
+#####################Average of half layer pixels (2x3)##########################
+
+
+#####################Average of quarter layer pixels (2x2)(Top Left)##########################
+redCounter = 0
+blueCounter = 0
+greenCounter = 0
+middle = 0.44445
+side = 0.22223
+diag = 0.11112
+r = 0
+c = 0
+
+#Middle
+redCounter = img[r][c][0]*middle + redCounter
+blueCounter = img[r][c][1]*middle + blueCounter
+greenCounter = img[r][c][2]*middle + greenCounter
+
+#Right
+redCounter = img[r+1][c][0]*side + redCounter
+blueCounter = img[r+1][c][1]*side + blueCounter
+greenCounter = img[r+1][c][2]*side + greenCounter
+
+#Bottom middle
+redCounter = img[r][c+1][0]*side + redCounter
+blueCounter = img[r][c+1][1]*side + blueCounter
+greenCounter = img[r][c+1][2]*side + greenCounter
+
+#Bottom right
+redCounter = img[r+1][c+1][0]*diag + redCounter
+blueCounter = img[r+1][c+1][1]*diag + blueCounter
+greenCounter = img[r+1][c+1][2]*diag + greenCounter
+
+redAvg = redCounter
+blueAvg = blueCounter
+greenAvg = greenCounter
+print("The average of the red pixels is:", redAvg)
+print("The average of the blue pixels is:", blueAvg)
+print("The average of the green pixels is:", greenAvg)
+#####################Average of quarter layer pixels (2x2)##########################
+
 
 #Converts AxesImage into Image and saves the new image
 #converted = plt.imshow(img, interpolation='nearest')
