@@ -3,9 +3,6 @@ import matplotlib.image as image
 import sys
 import os
 
-from numpy import average
-from pyparsing import col
-
 #Input for Image Name
 os.system("clear")
 name = input("Which image do you want to convert? \n")
