@@ -14,7 +14,7 @@
 
 ## Create Directory
 ```
-mkdir [nameo od directory]
+mkdir [name of directory]
 ```
 
 ## Install Source Code
