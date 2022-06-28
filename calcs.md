@@ -1,3 +1,11 @@
+# Process
+
+Take in image name
+Convert image into a matrix
+Create empty matrix with same dimensions as image
+Iterate through each pixel and calculate avgs then push to new matrix
+Convert back to image 
+
 # Gaussian Blur Calculations
 
 Find columns = w
