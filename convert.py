@@ -32,26 +32,34 @@ colmax = img.shape[1] - 1
 
 #If Heirarchy for different pixel cases
 if (i == 0 and j ==0):
+    # Top Left Pixel
     something = 0
 elif (i == 0 and j == colmax):
+    # Top Right Pixel
     something = 0
 elif (i == rowmax and j == 0):
+    # Bottom Left Pixel
     something = 0
 elif (i == rowmax and j == colmax):
+    # Bottom Right Pixel
     something = 0
 elif (i == 0):
+    # Top Row
     something = 0
 elif (i == rowmax):
+    # Bottom Row
     something = 0
 elif (j == 0):
+    # Left Column
     something = 0
 elif (j == colmax):
+    # Right Column
     something = 0
 else:
-    #Average of full layer pixels will go here
+    # Middle Pixels
     something = 0
 
-#####################Average of full layer pixels (3x3)##########################
+#####################Average of full layer pixels (3x3)(Middle Pixels)##########################
 redCounter = 0
 blueCounter = 0
 greenCounter = 0
@@ -111,7 +119,7 @@ greenAvg = greenCounter
 #####################Average of full layer pixels (3x3)##########################
 
 
-#####################Average of half layer pixels (2x3)(Top Coloumn)##########################
+#####################Average of half layer pixels (2x3)(Top Row)##########################
 redCounter = 0
 blueCounter = 0
 greenCounter = 0
