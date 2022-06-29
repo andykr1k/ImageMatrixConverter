@@ -1,2 +1,2 @@
 clean:
-	rm converted.png
+	rm converted.png test.png
