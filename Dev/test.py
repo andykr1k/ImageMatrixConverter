@@ -13,7 +13,7 @@ img2 = img.copy()
 rowmax = img2.shape[0] - 1
 colmax = img2.shape[1] - 1
 
-# Intializes the new matrix with a 100x100 black box
+# Iterate through img1 and modify img2
 for r in range(rowmax):
     for c in range(colmax):
        #If Heirarchy for different pixel cases
@@ -394,7 +394,6 @@ for r in range(rowmax):
 
             img2[r][c] = [redAvg, blueAvg, greenAvg]
             #####################Average of full layer pixels (3x3)##########################
-
 
 #Converts AxesImage into Image and saves the new image
 converted = plt.imshow(img2, interpolation='nearest')
