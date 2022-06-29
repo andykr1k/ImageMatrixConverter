@@ -515,5 +515,4 @@ for r in range(rowmax):
 
 #Converts AxesImage into Image and saves the new image
 converted = plt.imshow(img2, interpolation='nearest')
-plt.imsave("Dev/converted.jpeg", img2)
-plt.savefig('Dev/test.jpeg', bbox_inches='tight', pad_inches=0)
+plt.imsave("Dev/test.jpeg", img2)
