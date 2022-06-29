@@ -4,7 +4,7 @@ import sys
 import os
 
 #Converts Image into AxesImage
-img = image.imread("stock.jpeg")
+img = image.imread("person.jpeg")
 
 #Copy of Image for new matrix
 img2 = img.copy()
@@ -334,7 +334,7 @@ for r in range(rowmax):
 
             img2[r][c] = [redAvg, blueAvg, greenAvg]
             #####################Average of half layer pixels (2x3)##########################
-        elif (r > 1 and c > 1 and r < rowmax and c < colmax): # Second Layers
+        elif (r > 1 and c > 1 and r < rowmax - 1 and c < colmax - 1): # Second Layers
             #####################Average of two layer pixels (4x3)(Second Layer)##########################
             redCounter = 0
             blueCounter = 0
