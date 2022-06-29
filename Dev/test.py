@@ -4,7 +4,7 @@ import sys
 import os
 
 #Converts Image into AxesImage
-img = image.imread("person.jpeg")
+img = image.imread("stock.jpeg")
 
 #Copy of Image for new matrix
 img2 = img.copy()
@@ -397,4 +397,4 @@ for r in range(rowmax):
 
 #Converts AxesImage into Image and saves the new image
 converted = plt.imshow(img2, interpolation='nearest')
-plt.savefig('test.png', bbox_inches='tight', pad_inches=0)
+plt.savefig('Dev/test.png', bbox_inches='tight', pad_inches=0)
