@@ -4,7 +4,7 @@ import sys
 import os
 
 #Converts Image into AxesImage
-img = image.imread("person.jpeg")
+img = image.imread("stock.jpeg")
 
 #Copy of Image for new matrix
 img2 = img.copy()
@@ -334,7 +334,88 @@ for r in range(rowmax):
 
             img2[r][c] = [redAvg, blueAvg, greenAvg]
             #####################Average of half layer pixels (2x3)##########################
-        else: # Middle Pixels
+        elif (r > 1 and c > 1 and r < rowmax and c < colmax): #Second Layers
+            #####################Average of two layer pixels (4x3)(Second Layer)##########################
+            redCounter = 0
+            blueCounter = 0
+            greenCounter = 0
+            middle = 0.25
+            side = 0.125
+            diag = 0.0625
+
+            #Top Top Left // Second Layer
+            #Top Bottom Middle Left // Second Layer
+            #Top Top Middle Middle // Second Layer
+            #Top Top Middle Right // Second Layer
+            #Top Top Right // Second Layer
+
+            # Left Left Middle Up // Second Layer
+            # Left Left Middle // Second Layer
+            # Left Left Middle Down // Second Layer
+
+            # Right Right Middle Up // Second Layer
+            # Right Right Middle // Second Layer
+            # Right Right Middle Down // Second Layer
+
+            #Bottom Bottom Left // Second Layer
+            #Bottom Bottom Middle Left // Second Layer
+            #Bottom Bottom Middle Middle // Second Layer
+            #Bottom Bottom Middle Right // Second Layer
+            #Bottom Bottom Right // Second Layer
+            #Bottom left // First Layer
+
+
+            redCounter = img[r-1][c-1][0]*diag + redCounter
+            blueCounter = img[r-1][c-1][1]*diag + blueCounter
+            greenCounter = img[r-1][c-1][2]*diag + greenCounter
+
+            #Top middle // First Layer
+            redCounter = img[r][c-1][0]*side + redCounter
+            blueCounter = img[r][c-1][1]*side + blueCounter
+            greenCounter = img[r][c-1][2]*side + greenCounter
+
+            #Top right // First Layer
+            redCounter = img[r+1][c+1][0]*diag + redCounter
+            blueCounter = img[r+1][c+1][1]*diag + blueCounter
+            greenCounter = img[r+1][c+1][2]*diag + greenCounter
+
+            #Left // First Layer
+            redCounter = img[r-1][c][0]*side + redCounter
+            blueCounter = img[r-1][c][1]*side + blueCounter
+            greenCounter = img[r-1][c][2]*side + greenCounter
+
+            #Middle
+            redCounter = img[r][c][0]*middle + redCounter
+            blueCounter = img[r][c][1]*middle + blueCounter
+            greenCounter = img[r][c][2]*middle + greenCounter
+
+            #Right // First Layer
+            redCounter = img[r+1][c][0]*side + redCounter
+            blueCounter = img[r+1][c][1]*side + blueCounter
+            greenCounter = img[r+1][c][2]*side + greenCounter
+
+            #Bottom left // First Layer
+            redCounter = img[r-1][c+1][0]*diag + redCounter
+            blueCounter = img[r-1][c+1][1]*diag + blueCounter
+            greenCounter = img[r-1][c+1][2]*diag + greenCounter
+
+            #Bottom middle // First Layer
+            redCounter = img[r][c+1][0]*side + redCounter
+            blueCounter = img[r][c+1][1]*side + blueCounter
+            greenCounter = img[r][c+1][2]*side + greenCounter
+
+            #Bottom right // First Layer
+            redCounter = img[r+1][c+1][0]*diag + redCounter
+            blueCounter = img[r+1][c+1][1]*diag + blueCounter
+            greenCounter = img[r+1][c+1][2]*diag + greenCounter
+
+            redAvg = redCounter
+            blueAvg = blueCounter
+            greenAvg = greenCounter
+
+            img2[r][c] = [redAvg, blueAvg, greenAvg]
+            #####################Average of two layer pixels (4x3)(Second Layer)##########################
+        else: #First Layers
             #####################Average of full layer pixels (3x3)(Middle Pixels)##########################
             redCounter = 0
             blueCounter = 0
