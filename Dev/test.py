@@ -334,37 +334,74 @@ for r in range(rowmax):
 
             img2[r][c] = [redAvg, blueAvg, greenAvg]
             #####################Average of half layer pixels (2x3)##########################
-        elif (r > 1 and c > 1 and r < rowmax and c < colmax): #Second Layers
+        elif (r > 1 and c > 1 and r < rowmax and c < colmax): # Second Layers
             #####################Average of two layer pixels (4x3)(Second Layer)##########################
             redCounter = 0
             blueCounter = 0
             greenCounter = 0
             middle = 0.25
-            side = 0.125
-            diag = 0.0625
+            side = 0.11
+            diag = 0.05
+            second = 0.01
 
-            #Top Top Left // Second Layer
-            #Top Bottom Middle Left // Second Layer
+            #Top Top Middle Left // Second Layer
+            redCounter = img[r-1][c-2][0]*second + redCounter
+            blueCounter = img[r-1][c-2][1]*second + blueCounter
+            greenCounter = img[r-1][c-2][2]*second + greenCounter
             #Top Top Middle Middle // Second Layer
+            redCounter = img[r][c-2][0]*second + redCounter
+            blueCounter = img[r][c-2][1]*second + blueCounter
+            greenCounter = img[r][c-2][2]*second + greenCounter
             #Top Top Middle Right // Second Layer
-            #Top Top Right // Second Layer
+            redCounter = img[r+1][c-2][0]*second + redCounter
+            blueCounter = img[r+1][c-2][1]*second + blueCounter
+            greenCounter = img[r+1][c-2][2]*second + greenCounter
 
             # Left Left Middle Up // Second Layer
+            redCounter = img[r-2][c-1][0]*second + redCounter
+            blueCounter = img[r-2][c-1][1]*second + blueCounter
+            greenCounter = img[r-2][c-1][2]*second + greenCounter
+
             # Left Left Middle // Second Layer
+            redCounter = img[r-2][c][0]*second + redCounter
+            blueCounter = img[r-2][c][1]*second + blueCounter
+            greenCounter = img[r-2][c][2]*second + greenCounter
             # Left Left Middle Down // Second Layer
+            redCounter = img[r-2][c+1][0]*second + redCounter
+            blueCounter = img[r-2][c+1][1]*second + blueCounter
+            greenCounter = img[r-2][c+1][2]*second + greenCounter
 
             # Right Right Middle Up // Second Layer
+            redCounter = img[r+2][c-1][0]*second + redCounter
+            blueCounter = img[r+2][c-1][1]*second + blueCounter
+            greenCounter = img[r+2][c-1][2]*second + greenCounter
+
             # Right Right Middle // Second Layer
+            redCounter = img[r+2][c][0]*second + redCounter
+            blueCounter = img[r+2][c][1]*second + blueCounter
+            greenCounter = img[r+2][c][2]*second + greenCounter
+
             # Right Right Middle Down // Second Layer
+            redCounter = img[r+2][c+1][0]*second + redCounter
+            blueCounter = img[r+2][c+1][1]*second + blueCounter
+            greenCounter = img[r+2][c+1][2]*second + greenCounter
 
-            #Bottom Bottom Left // Second Layer
             #Bottom Bottom Middle Left // Second Layer
+            redCounter = img[r-1][c+2][0]*second + redCounter
+            blueCounter = img[r-1][c+2][1]*second + blueCounter
+            greenCounter = img[r-1][c+2][2]*second + greenCounter
+
             #Bottom Bottom Middle Middle // Second Layer
+            redCounter = img[r][c+2][0]*second + redCounter
+            blueCounter = img[r][c+2][1]*second + blueCounter
+            greenCounter = img[r][c+2][2]*second + greenCounter
+
             #Bottom Bottom Middle Right // Second Layer
-            #Bottom Bottom Right // Second Layer
+            redCounter = img[r+1][c+2][0]*second + redCounter
+            blueCounter = img[r+1][c+2][1]*second + blueCounter
+            greenCounter = img[r+1][c+2][2]*second + greenCounter
+
             #Bottom left // First Layer
-
-
             redCounter = img[r-1][c-1][0]*diag + redCounter
             blueCounter = img[r-1][c-1][1]*diag + blueCounter
             greenCounter = img[r-1][c-1][2]*diag + greenCounter
