@@ -9,8 +9,10 @@
 <img alt="GitHub Commit Activity (Week)" src="https://img.shields.io/github/commit-activity/w/andykr1k/ImageMatrixConverter?&style=for-the-badge"/>
 </div>
 
-# To begin program:
+# Summary
+This program is meant to take in a user selected image and regenerate the image with a gaussian blur.
 
+# To begin program:
 
 ## Create Directory
 ```
@@ -46,3 +48,5 @@ python3 convert.py (Will prompt for image name *must have image in project direc
 ```
 deactivate
 ```
+
+# References
