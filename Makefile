@@ -1,2 +1,2 @@
 clean:
-	rm converted.jpeg converted.png Dev/test.jpeg Dev/converted.jpeg
+	rm Converted/blur.jpeg Converted/xFlip.jpeg Converted/yFlip.jpeg Dev/test.jpeg 

@@ -41,7 +41,9 @@ pip install matplotlib
 
 ## Run Program
 ```
-python3 convert.py (Will prompt for image name *must have image in project directory* *must include full name w/ extension*)
+python3 blur.py (Will prompt for image name *must have image in project directory* *must include full name w/ extension*)
+python3 xFlip.py (Will prompt for image name *must have image in project directory* *must include full name w/ extension*)
+python3 yFlip.py (Will prompt for image name *must have image in project directory* *must include full name w/ extension*)
 ```
 
 ## Don't Forget to Deactivate your Enviroment!
