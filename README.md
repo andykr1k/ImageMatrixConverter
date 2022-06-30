@@ -52,3 +52,5 @@ deactivate
 ```
 
 # References
+https://datacarpentry.org/image-processing/06-blurring/#:~:text=The%20Gaussian%20blur%20is%20a,See%20the%20skimage.
+https://docs.google.com/spreadsheets/d/1v-gsoJyD9SI8m3mrOyXgK5H07w0GWTpI9dj6f6z4XVM/edit#gid=0

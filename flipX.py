@@ -4,7 +4,7 @@ import sys
 import os
 
 #Converts Image into AxesImage
-img = image.imread("person.jpeg")
+img = image.imread("Images/person.jpeg")
 
 #Copy of Image for new matrix
 img2 = img.copy()
